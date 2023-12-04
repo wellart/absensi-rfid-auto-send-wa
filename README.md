@@ -1,10 +1,24 @@
-##Modifan Absensi RFID dari youtube uthe str
+# Simple attendance system with ESP32, RFID-RC522 and Google Sheets.
 
-📌 ARDUINO IDE + ESP32 + RFID RC522 Module + Google Sheets (Google Spreadsheet).
-📌 Starting RFID-RC522 with ESP32 and Arduino IDE.
-📌 Simple Attendance System with ESP32, RFID-RC522 and Google Sheets.
+Software used :
+- Arduino IDE (V1.8.9).
+- Arduino Core for The ESP32 (V1.0.6).
+- Notepad++ (V8.4.6).
 
+Arduino libraries used :
+- MFRC522 by GithubCommunity (V1.4.3)
+- LiquidCrystal_I2C (V1.1.4)
 
-follow uthe str and subscribe banyak tutor bagus disana
-https://www.instagram.com/utehstr/
+Hardware used :
+- ESP32 DEVKIT V1.
+- RFID RC522 Module.
+- LCD 20x4 I2C.
+- Tactile Push Button.
+- And other equipment such as cables and others.
+
+follow uthe str and subscribe banyak tutor bagus disana 
+
+https://www.instagram.com/utehstr/ 
+
 https://www.youtube.com/channel/UCk8rZ8lhAH4H-75tQ7Ljc1A
+
