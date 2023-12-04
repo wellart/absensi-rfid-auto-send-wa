@@ -129,6 +129,11 @@ function doGet(e) {
         // Variables to get the current Date and Time.
         var Curr_Date = Utilities.formatDate(new Date(), "Asia/Jakarta", 'dd/MM/yyyy');
         var Curr_Time = Utilities.formatDate(new Date(), "Asia/Jakarta", 'HH:mm:ss');
+        // tambahan colum presensi
+        var abs_in = "Hadir";
+        var abs_out = "Pulang";
+        var triger_wa_in = "send";
+        var triger_wa_out = "resend";
 
         // Variable to get all the data from the "attendance" sheet.
         var data = sheet_attendence.getDataRange().getDisplayValues();
@@ -160,6 +165,10 @@ function doGet(e) {
           sheet_attendence.getRange("B2").setValue(uid_val);
           sheet_attendence.getRange("C2").setValue(Curr_Date);
           sheet_attendence.getRange("D2").setValue(Curr_Time);
+          //tambahan user in presennsi
+          //sheet_attendence.getRange("F2").setValue(user_wa);
+          sheet_attendence.getRange("G2").setValue(abs_in);
+          sheet_attendence.getRange("H2").setValue(triger_wa_in);
           SpreadsheetApp.flush();
           
           // Sends response payload to ESP32.
@@ -170,6 +179,7 @@ function doGet(e) {
         
         //..................Conditions for filling in "Time Out" attendance.
         if (enter_data == "time_out") {
+          sheet_attendence.getRange("G" + num_row).setValue(abs_out);
           sheet_attendence.getRange("E" + num_row).setValue(Curr_Time);
           result += ",TO_Successful" + "," + user_name_by_UID + "," + Date_val + "," + TI_val + "," + Curr_Time;
           
