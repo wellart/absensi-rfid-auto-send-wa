@@ -26,3 +26,10 @@ https://www.instagram.com/utehstr/
 
 https://www.youtube.com/channel/UCk8rZ8lhAH4H-75tQ7Ljc1A
 
+
+## Screenshots
+
+![App Screenshot](absen1.png)
+
+![App Screenshot](absen2.png)
+
