@@ -18,6 +18,9 @@ Hardware used :
 
 follow uthe str and subscribe banyak tutor bagus disana 
 
+Video Tutorial
+https://www.youtube.com/watch?v=r0Ndu2VYR2Y
+
 https://www.instagram.com/utehstr/ 
 
 https://www.youtube.com/channel/UCk8rZ8lhAH4H-75tQ7Ljc1A
