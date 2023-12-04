@@ -737,3 +737,30 @@ void loop(){
 }
 //________________________________________________________________________________
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// notifikasi whatsapp
+function sendWA(phone,nama,status)
+{
+    pesan = '*Assalamualaikum* \nOrang Tua/Wali dari *'+ nama +'*,\nIni pesan whatsapp otomatis dari absensi murid Sanggar Rumah Baba. \nbahwa *' + nama + '* Sudah '+ status +' Latihan. \n \nTerima Kasih *Sanggar Rumah Baba*';
+    Logger.log('phone :'+phone+'message: '+pesan)
+    var url = "https://*****.wablas.com/api/v2/send-message"; // change with your wablas url
+    var headers = {
+            "Authorization" : "your-wa-blas-key", // change with your wablas api key
+            "content-type" : "application/json",
+            };
+    var payload =  JSON.stringify(
+        {"data": [
+            {
+              "phone": phone,
+              "message":pesan
+            }]
+        });
+    var option = {
+        "method": 'POST',
+        "headers": headers,
+        "payload" : payload
+    };
+    var response = UrlFetchApp.fetch(url,option);
+    var json = JSON.parse(response.getContentText());
+    Logger.log(json.data);
+}
